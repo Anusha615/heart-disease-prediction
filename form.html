@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction - Patient Info</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Information</h2>
+        <form action="/result" method="post">
+            <input type="text" name="age" placeholder="Age">
+            <input type="text" name="sex" placeholder="Sex (1 = Male, 0 = Female)">
+            <input type="text" name="cp" placeholder="Chest Pain Type (0–3)">
+            <input type="text" name="trestbps" placeholder="Resting BP">
+            <input type="text" name="chol" placeholder="Cholesterol">
+            <input type="text" name="fbs" placeholder="Fasting Blood Sugar (>120mg/dl = 1)">
+            <input type="text" name="restecg" placeholder="Rest ECG (0–2)">
+            <input type="text" name="thalach" placeholder="Max Heart Rate">
+            <input type="text" name="exang" placeholder="Exercise Induced Angina (1 = Yes)">
+            <input type="text" name="oldpeak" placeholder="ST Depression">
+            <input type="text" name="slope" placeholder="Slope (0–2)">
+            <input type="text" name="ca" placeholder="Number of Vessels (0–3)">
+            <input type="text" name="thal" placeholder="Thal (1 = normal, 2 = fixed defect, 3 = reversible)">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
